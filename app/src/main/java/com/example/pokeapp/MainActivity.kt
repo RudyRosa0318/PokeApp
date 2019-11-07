@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         centerbtn.setOnClickListener{
-          val menuScreen = Intent(this, PokeMenu :: class.java)
+          val menuScreen = Intent(this, MenuPoke :: class.java)
             startActivity(menuScreen)
 
         }
