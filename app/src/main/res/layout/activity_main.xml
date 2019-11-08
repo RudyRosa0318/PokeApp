@@ -8,8 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="418dp"
-        android:layout_height="763dp"
+        android:layout_width="641dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:contentDescription="FondoPredefinido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,14 +23,16 @@
 
     <ImageButton
         android:id="@+id/centerbtn"
-        android:layout_width="139dp"
-        android:layout_height="147dp"
+        android:layout_width="172dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="8dp"
         android:background="#00FFFFFF"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52"
+        app:layout_constraintVertical_bias="0.512"
         app:srcCompat="@drawable/centro" />
 </androidx.constraintlayout.widget.ConstraintLayout>
