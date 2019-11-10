@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/ButtonBulbasaur"
+        android:id="@+id/ButtonBulbasaur1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="56dp"
         android:clickable="true"
         app:backgroundTint="#00FFFFFF"
@@ -32,4 +32,137 @@
         app:layout_constraintTop_toTopOf="parent"
         app:maxImageSize="100dp"
         app:srcCompat="@drawable/bulbasaur" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonivysaur2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="56dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/ButtonBulbasaur1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/ivy" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonvenusaur3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="56dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/buttonivysaur2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="90dp"
+        app:srcCompat="@drawable/venu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttoncharmander4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="56dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/buttonvenusaur3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="90dp"
+        app:srcCompat="@drawable/charman" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttoncharmeleon5"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttoncharmander4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="90dp"
+        app:srcCompat="@drawable/charmel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttoncharizard6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="122dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/charizard" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonsquirtle7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="122dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/buttoncharizard6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/squirtle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonwartortle8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="122dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/buttonsquirtle7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/wartortle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonblastoise9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="122dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/buttonwartortle8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/blastoise" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttoncaterpie10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:clickable="true"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonblastoise9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="100dp"
+        app:srcCompat="@drawable/caterpie" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
