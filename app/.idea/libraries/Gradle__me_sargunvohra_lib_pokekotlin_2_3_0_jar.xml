@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: me.sargunvohra.lib:pokekotlin:2.3.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.sargunvohra.lib/pokekotlin/2.3.0/e26242682775696c8b969012324027831a0fd229/pokekotlin-2.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.sargunvohra.lib/pokekotlin/2.3.0/e65fb05e62a6fcf88e031a83205d707871cd78a1/pokekotlin-2.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.sargunvohra.lib/pokekotlin/2.3.0/e4dbd6275f67de7193fa1045cce8e37910066fac/pokekotlin-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -33,6 +33,55 @@ class Seleccion_Pokemon : AppCompatActivity() {
             menuScreen.putExtra("valorPK",valuePokemon)
             startActivity(menuScreen)
         }
+
+        buttoncharmander4.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 4
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
+
+        buttoncharmeleon5.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 5
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
+
+        buttoncharizard6.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 6
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
+
+        buttonsquirtle7.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 7
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
+
+        buttonwartortle8.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 8
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
+
+        buttonblastoise9.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 9
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
+
+        buttoncaterpie10.setOnClickListener{
+            val menuScreen = Intent(this, PokeMenu :: class.java)
+            val valuePokemon = 10
+            menuScreen.putExtra("valorPK",valuePokemon)
+            startActivity(menuScreen)
+        }
     }
 
 

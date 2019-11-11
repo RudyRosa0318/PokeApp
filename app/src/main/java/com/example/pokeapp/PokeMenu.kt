@@ -77,8 +77,8 @@ var pokeimagen: String = ""
 //        if (apiResponse.cod == 200) {
 
        textviewname.text = apiResponse.name
-       //textViewdatos1.text = speciesResponse.genera[2].genus
-        textViewdatos1.text = apiResponse.order.toString()
+       //textViewdatos1.text = speciesResponse.genera[2].genus[2].toString()
+        textViewdatos1.text = apiResponse.id.toString()
         textViewdatos2.text = apiResponse.height.toString()
         textViewdatos3.text = apiResponse.stats[0].base_stat.toString()
         textViewdatos4.text = apiResponse.moves[0].move.name
@@ -86,7 +86,7 @@ var pokeimagen: String = ""
 
         Picasso.get()
             .load(apiResponse.sprites.front_default)
-            .resize(820, 820)
+            .resize(800, 800)
             .into(imageviewpokemon)
 
         toast("Datos obtenidos correctamente")

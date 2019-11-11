@@ -19,4 +19,8 @@
     <string name="text_view_datos2"> %1$s </string>
     <string name="text_view_datos3"> %1$s </string>
     <string name="text_view_datos4"> %1$s </string>
+    <string name="text_view_numeroorden"> Numero de Pokemon </string>
+    <string name="text_view_altura">Altura </string>
+    <string name="text_view_primeros_datos">Primeros Stats </string>
+    <string name="text_view_primer_movimiento">Primer Movimiento </string>
 </resources>

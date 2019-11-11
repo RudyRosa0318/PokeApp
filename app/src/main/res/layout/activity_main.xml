@@ -8,15 +8,15 @@
 
     <ImageView
         android:id="@+id/buttomrectangle"
-        android:layout_width="415dp"
-        android:layout_height="297dp"
+        android:layout_width="435dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="2dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/imagecenterrect"
         app:srcCompat="@drawable/abajo" />
 
     <ImageView
@@ -24,12 +24,10 @@
         android:layout_width="429dp"
         android:layout_height="301dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/arriba1" />
 
     <ImageView
