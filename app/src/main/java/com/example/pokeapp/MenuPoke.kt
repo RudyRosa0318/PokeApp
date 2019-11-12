@@ -57,4 +57,9 @@ class MenuPoke : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+
+
+
+
+
 }

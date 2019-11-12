@@ -3,6 +3,7 @@ package com.example.pokeapp.ui.home
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.service.media.MediaBrowserService
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +34,7 @@ class HomeFragment : Fragment() {
         val textView: TextView = root.findViewById(R.id.text_selecciona)
         homeViewModel.text.observe(this, Observer {
             textView.text = "Seleccione su Pokemon"
-
+            setUpAddComplaint(root = PokeMenu())
 
         }
         )
@@ -42,6 +43,14 @@ class HomeFragment : Fragment() {
 
     }
 
-
+fun setUpAddComplaint(root:PokeMenu)
+    {
+        root.buttonbulbasaur1.setOnClickListener {
+                   activity ?.supportFragmentManager ?.beginTransaction()
+                    ?.replace(R.id.nav_home,HomeFragment())
+                    ?.commit()
+            startActivity(Intent(context, PokeMenu::class.java))
+        }
+    }
 
 }
