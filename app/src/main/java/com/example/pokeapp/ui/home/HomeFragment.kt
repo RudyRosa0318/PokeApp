@@ -1,5 +1,6 @@
 package com.example.pokeapp.ui.home
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.pokeapp.MenuPoke
+import com.example.pokeapp.PokeMenu
 import com.example.pokeapp.R
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -33,8 +35,11 @@ class HomeFragment : Fragment() {
             textView.text = "Seleccione su Pokemon"
 
 
-        })
+        }
+        )
         return root
+
+
     }
 
 
