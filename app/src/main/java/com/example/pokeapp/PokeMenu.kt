@@ -42,7 +42,7 @@ class PokeMenu : AppCompatActivity() {
                 Log.d("HTTPVolley",  response)
                 toast("Conexión establecida")
                 //
-               //jsonToObject(response)
+               jsonToObject(response)
 
             },
             Response.ErrorListener {
