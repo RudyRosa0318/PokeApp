@@ -14,7 +14,6 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-
-    <string name="textViewPokemon">%1$s</string>
+    <string name="text_view_name"> %1$s </string>
 
 </resources>

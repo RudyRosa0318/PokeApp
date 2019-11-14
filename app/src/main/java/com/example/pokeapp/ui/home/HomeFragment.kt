@@ -34,23 +34,23 @@ class HomeFragment : Fragment() {
         val textView: TextView = root.findViewById(R.id.text_selecciona)
         homeViewModel.text.observe(this, Observer {
             textView.text = "Seleccione su Pokemon"
-            setUpAddComplaint(root = PokeMenu())
 
-        }
-        )
+           /* buttonbulbasaur1.setOnClickListener {
+                activity?.supportFragmentManager?.beginTransaction()
+                    ?.replace(R.id.nav_host_fragment,HomeFragment())
+                    ?.commit()
+                startActivity(Intent(context, PokeMenu::class.java))
+
+            }
+*/
+        })
         return root
 
 
     }
 
-fun setUpAddComplaint(root:PokeMenu)
-    {
-        root.buttonbulbasaur1.setOnClickListener {
-                   activity ?.supportFragmentManager ?.beginTransaction()
-                    ?.replace(R.id.nav_home,HomeFragment())
-                    ?.commit()
-            startActivity(Intent(context, PokeMenu::class.java))
-        }
+    fun setUpValue(){
+
     }
 
 }
