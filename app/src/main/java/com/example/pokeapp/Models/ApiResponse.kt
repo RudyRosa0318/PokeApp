@@ -1,8 +1,7 @@
 package com.example.pokeapp.Models
 
-class ApiResponse(species: ArrayList<Speciess>){
-
-/*  val abilities: List<Ability>,
+data class ApiResponse(
+    val abilities: List<Ability>,
     val base_experience: Int,
     val forms: List<Form>,
     val game_indices: List<GameIndice>,
@@ -19,17 +18,4 @@ class ApiResponse(species: ArrayList<Speciess>){
     val stats: List<Stat>,
     val types: List<Type>,
     val weight: Int
-
-   */
-  var species: ArrayList<Speciess>? = null
-  var cod: Int = 0
-  var order: Int = 0
-    var name: String = ""
-
-    init {
-        this.species = species
-        this.cod = cod
-        this.order = order
-        this.name = name
-    }
-}
+)
