@@ -4,47 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PokeMenu" >
+    android:background="@drawable/fondo"
+    tools:context=".PokeMenu">
 
     <TextView
         android:id="@+id/textviewname"
-        android:layout_width="185dp"
-        android:layout_height="46dp"
+        android:layout_width="264dp"
+        android:layout_height="44dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/text_view_name"
-        android:textSize="32sp"
+        android:textAllCaps="true"
+        android:textColor="#F2000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewdatos1"
-        android:layout_width="284dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
         android:lineSpacingExtra="12sp"
         android:text="@string/text_view_datos1"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageviewpokemon" />
 
+    <TextView
+        android:id="@+id/textViewdatos2"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:text="@string/text_view_datos2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.603" />
+
     <ImageView
         android:id="@+id/imageviewpokemon"
-        android:layout_width="276dp"
-        android:layout_height="221dp"
+        android:layout_width="371dp"
+        android:layout_height="207dp"
         android:layout_marginTop="16dp"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textviewname"
-        app:srcCompat="@drawable/pikachu" />
+        app:srcCompat="@drawable/kantologo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
