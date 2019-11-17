@@ -17,4 +17,6 @@
     <string name="text_view_name"> %1$s </string>
     <string name="text_view_datos1"> %1$s </string>
     <string name="text_view_datos2"> %1$s </string>
+    <string name="text_view_datos3"> %1$s </string>
+    <string name="text_view_datos4"> %1$s </string>
 </resources>

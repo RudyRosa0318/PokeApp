@@ -51,6 +51,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.603" />
 
+    <TextView
+        android:id="@+id/textViewdatos3"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="193dp"
+        android:text="@string/text_view_datos3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewdatos2" />
+
+    <TextView
+        android:id="@+id/textViewdatos4"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/text_view_datos4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewdatos3" />
+
     <ImageView
         android:id="@+id/imageviewpokemon"
         android:layout_width="371dp"

@@ -9,6 +9,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.pokeapp.Models.ApiResponse
 import com.example.pokeapp.ModelsDefintition.Genera
+import com.example.pokeapp.ModelsDefintition.LanguageX
 import com.example.pokeapp.ModelsDefintition.SpeciesResponse
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
@@ -35,7 +36,7 @@ var pokeimagen: String = ""
 
         }
         else if (Network.verifyConnection(this)) {
-            httpVolley2(getUrlApi2())}
+            httpVolley(getUrlApi2())}
 
         else {
             toast("¡No tienes conexión a Internet!")
@@ -76,8 +77,12 @@ var pokeimagen: String = ""
 //        if (apiResponse.cod == 200) {
 
        textviewname.text = apiResponse.name
-       textViewdatos1.text = speciesResponse.genera.get(2).genus
-       textViewdatos2.text = apiResponse.species.url
+       //textViewdatos1.text = speciesResponse.genera[2].genus
+        textViewdatos1.text = apiResponse.order.toString()
+        textViewdatos2.text = apiResponse.height.toString()
+        textViewdatos3.text = apiResponse.stats[0].base_stat.toString()
+        textViewdatos4.text = apiResponse.moves[0].move.name
+
 
         Picasso.get()
             .load(apiResponse.sprites.front_default)
@@ -99,37 +104,9 @@ var pokeimagen: String = ""
 
     }
 
-    private fun verifyAndConnect2() {
-        if (Network.verifyConnection(this)) {
-            httpVolley2(getUrlApi2())
-        } else {
-            toast("¡No tienes conexión a Internet!")
-        }
 
-    }
 
-    private fun httpVolley2(url: String) {
-        val queue = Volley.newRequestQueue(this)
 
-        // Obtener un string de respuesta desde la URL enviada
-        val stringRequest2 = StringRequest(
-            Request.Method.GET, url,
-            Response.Listener<String> { response ->
-                Log.d("HTTPVolley",  response)
-                toast("Conexión establecida")
-                //
-                jsonToObject(response)
-
-            },
-            Response.ErrorListener {
-                Log.d("HTTPVolley", "Error en la URL $url")
-                toast("¡Ha ocurrido un error en la conexión!")
-            })
-
-        // Agregar la peticion a la cola de peticiones
-        queue.add(stringRequest2)
-
-    }
 
 
 
