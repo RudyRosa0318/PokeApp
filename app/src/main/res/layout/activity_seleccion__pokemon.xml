@@ -6,163 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Seleccion_Pokemon">
 
-    <TextView
-        android:id="@+id/text_selecciona"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textSize="20sp"
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="407dp"
+        android:layout_height="730dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonbulbasaur1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="56dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/bulbasaur" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewPokemon"
+            android:layout_width="417dp"
+            android:layout_height="678dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_selecciona"
+            app:layout_constraintVertical_bias="0.111" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonivysaur2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="56dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttonbulbasaur1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/ivy" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonvenusaur3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="56dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttonivysaur2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="90dp"
-        app:srcCompat="@drawable/venu" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttoncharmander4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="56dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttonvenusaur3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="90dp"
-        app:srcCompat="@drawable/charman" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttoncharmeleon5"
-        android:layout_width="56dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttoncharmander4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="90dp"
-        app:srcCompat="@drawable/charmel" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttoncharizard6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="122dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/charizard" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonsquirtle7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="122dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttoncharizard6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/squirtle" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonwartortle8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="122dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttonsquirtle7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/wartortle" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonblastoise9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="122dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttonwartortle8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/blastoise" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttoncaterpie10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="122dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonblastoise9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/caterpie" />
 </androidx.constraintlayout.widget.ConstraintLayout>

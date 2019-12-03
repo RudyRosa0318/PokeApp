@@ -8,17 +8,14 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.pokeapp.Models.ApiResponse
-import com.example.pokeapp.ModelsDefintition.Genera
-import com.example.pokeapp.ModelsDefintition.LanguageX
 import com.example.pokeapp.ModelsDefintition.SpeciesResponse
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_poke_menu.*
 
-
 class PokeMenu : AppCompatActivity() {
-var pokeid:Int=0
-var pokeimagen: String = ""
+    var pokeid:Int=0
+    var pokeimagen: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poke_menu)
@@ -41,6 +38,7 @@ var pokeimagen: String = ""
         else {
             toast("¡No tienes conexión a Internet!")
         }
+
 
     }
 
@@ -94,20 +92,14 @@ var pokeimagen: String = ""
     }
 
 
-    fun getUrlApi():String {
+        fun getUrlApi():String {
         return "https://pokeapi.co/api/v2/pokemon/$pokeid/"
 
     }
 
     fun getUrlApi2():String {
-        return "https://pokeapi.co/api/v2/pokemon-species/$pokeid//"
-
+            return "https://pokeapi.co/api/v2/pokemon-species/$pokeid//"
     }
-
-
-
-
-
 
 
 }

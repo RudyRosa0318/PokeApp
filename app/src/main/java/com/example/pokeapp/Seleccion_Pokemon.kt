@@ -1,88 +1,53 @@
 package com.example.pokeapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import android.util.Log
+import android.view.View
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pokeapp.ModelsDefintition.Pokemon
 import kotlinx.android.synthetic.main.activity_seleccion__pokemon.*
+import tech.twentytwobits.recyclerviewexample.ClickListener
+import tech.twentytwobits.recyclerviewexample.LongClickListener
 
 class Seleccion_Pokemon : AppCompatActivity() {
+    private lateinit var layoutManager: RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seleccion__pokemon)
-        val pkmenu = PokeMenu()
 
-        buttonbulbasaur1.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 1
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+        layoutManager = GridLayoutManager(this, 3)
 
-        buttonivysaur2.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 2
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+        val pokemons = ArrayList<Pokemon>()
+        pokemons.add(Pokemon("Bulbasaur", ""))
 
-        buttonvenusaur3.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 3
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+        val adapter = AdapterCustom(this, pokemons, object : ClickListener {
+            override fun onClick(view: View, index: Int) {
+                Toast.makeText(applicationContext, pokemons[index].name, Toast.LENGTH_SHORT).show()
+            }
+        }, object : LongClickListener {
+            override fun LongClickListener(view: View, index: Int) {
+                Log.d("LONGCLICK", pokemons[index].name)
+            }
+        })
 
-        buttoncharmander4.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 4
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+        recycleViewPokemon.setHasFixedSize(true)
+        recycleViewPokemon.layoutManager = layoutManager
+        recycleViewPokemon.adapter = adapter
 
-        buttoncharmeleon5.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 5
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+        swipeRefreshLayout.setOnRefreshListener {
+            Log.d("REFRESH", "La información se ha refrescado")
 
-        buttoncharizard6.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 6
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+            // Mentirita
+            for (i in 1..100000000) {
 
-        buttonsquirtle7.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 7
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
+            }
+            swipeRefreshLayout.isRefreshing = false
 
-        buttonwartortle8.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 8
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
-
-        buttonblastoise9.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 9
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }
-
-        buttoncaterpie10.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 10
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
         }
     }
-
 
 }

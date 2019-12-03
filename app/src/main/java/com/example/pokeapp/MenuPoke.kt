@@ -14,6 +14,8 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import com.example.pokeapp.ui.home.HomeFragment
+import kotlinx.android.synthetic.main.activity_menu_poke.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class MenuPoke : AppCompatActivity() {
@@ -44,6 +46,12 @@ class MenuPoke : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+   /* R.id.nav_home.
+        activity?.supportFragmentManager?.beginTransaction()
+        ?.replace(R.id.nav_host_fragment, HomeFragment())
+        ?.commit()
+        startActivity(Intent(context, PokeMenu::class.java))
+*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
