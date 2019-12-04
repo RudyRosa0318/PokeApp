@@ -23,4 +23,6 @@
     <string name="text_view_altura">Altura </string>
     <string name="text_view_primeros_datos">Primeros Stats </string>
     <string name="text_view_primer_movimiento">Primer Movimiento </string>
+    <string name="text_view_nombre"> Bulbasaur </string>
+
 </resources>

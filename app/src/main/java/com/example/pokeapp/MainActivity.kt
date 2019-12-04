@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
         centerbtn.setOnClickListener{
-            val menuScreen = Intent(this, Seleccion_Pokemon :: class.java)
+            val menuScreen = Intent(this, SeleccionPokemon :: class.java)
             startActivity(menuScreen)
         }
 

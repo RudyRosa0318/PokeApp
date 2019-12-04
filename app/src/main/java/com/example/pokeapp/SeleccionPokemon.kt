@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_seleccion__pokemon.*
 import tech.twentytwobits.recyclerviewexample.ClickListener
 import tech.twentytwobits.recyclerviewexample.LongClickListener
 
-class Seleccion_Pokemon : AppCompatActivity() {
+class SeleccionPokemon : AppCompatActivity() {
     private lateinit var layoutManager: RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,8 @@ class Seleccion_Pokemon : AppCompatActivity() {
         layoutManager = GridLayoutManager(this, 3)
 
         val pokemons = ArrayList<Pokemon>()
-        pokemons.add(Pokemon("Bulbasaur", ""))
+       // pokemons.add(Pokemon("Bulbasaur", ""))
+
 
         val adapter = AdapterCustom(this, pokemons, object : ClickListener {
             override fun onClick(view: View, index: Int) {
