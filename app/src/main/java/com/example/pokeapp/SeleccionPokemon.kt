@@ -8,12 +8,21 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokeapp.ModelsDefintition.Pokemon
+import com.example.pokeapp.Retrofit.IPokemonList
+import com.example.pokeapp.Retrofit.RetrofitClient
+import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activity_seleccion__pokemon.*
 import tech.twentytwobits.recyclerviewexample.ClickListener
 import tech.twentytwobits.recyclerviewexample.LongClickListener
 
 class SeleccionPokemon : AppCompatActivity() {
     private lateinit var layoutManager: RecyclerView.LayoutManager
+    internal var compositeDisposable = CompositeDisposable()
+    internal var iPokemonList:IPokemonList
+    init {
+        val retrofit = RetrofitClient.instances
+        iPokemonList = retrofit.create(IPokemonList::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +34,7 @@ class SeleccionPokemon : AppCompatActivity() {
        // pokemons.add(Pokemon("Bulbasaur", ""))
 
 
-        val adapter = AdapterCustom(this, pokemons, object : ClickListener {
+     /*   val adapter = AdapterCustom(this, pokemons, object : ClickListener {
             override fun onClick(view: View, index: Int) {
                 Toast.makeText(applicationContext, pokemons[index].name, Toast.LENGTH_SHORT).show()
             }
@@ -33,11 +42,12 @@ class SeleccionPokemon : AppCompatActivity() {
             override fun LongClickListener(view: View, index: Int) {
                 Log.d("LONGCLICK", pokemons[index].name)
             }
-        })
+        })*/
 
         recycleViewPokemon.setHasFixedSize(true)
         recycleViewPokemon.layoutManager = layoutManager
-        recycleViewPokemon.adapter = adapter
+        //recycleViewPokemon.adapter = adapter
+        val itemDecoration = ItemOffsetDecoration(activity!!,R.dimen.spacing)
 
         swipeRefreshLayout.setOnRefreshListener {
             Log.d("REFRESH", "La información se ha refrescado")
