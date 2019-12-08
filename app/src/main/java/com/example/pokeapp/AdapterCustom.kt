@@ -8,12 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.pokeapp.Models.Sprites
-import com.example.pokeapp.ModelsDefintition.Pokemon
+import com.example.pokeapp.Models.ApiResponse
 import tech.twentytwobits.recyclerviewexample.ClickListener
 import tech.twentytwobits.recyclerviewexample.LongClickListener
 
-class AdapterCustom(var context: Context, var pokemonList: ArrayList<Sprites>,var pokemonListName: ArrayList<Pokemon>, var clickListener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdapterCustom.ViewHolder>() {
+class AdapterCustom(var context: Context, var pokemonList: List<ApiResponse>, var clickListener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdapterCustom.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.template_pokemon, parent, false)
@@ -26,8 +25,8 @@ class AdapterCustom(var context: Context, var pokemonList: ArrayList<Sprites>,va
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(context).load(pokemonList[position].front_default).into(holder.img_Poke)
-        holder.txtPokemon.text = pokemonListName[position].name
+        Glide.with(context).load(pokemonList[position].sprites.front_default).into(holder.img_Poke)
+        holder.txtPokemon.text = pokemonList[position].name
     }
 
     // Mapear las variables de cada item dentro de items con los
