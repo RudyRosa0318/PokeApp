@@ -11,27 +11,29 @@
         app:cardCornerRadius="4dp">
 
         <LinearLayout
-            android:padding="16dp"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:background="#A9532525"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            
+            android:padding="8dp">
+
             <ImageView
                 android:id="@+id/pokemon_image"
-                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:background="@android:color/white"
-                android:layout_width="100dp"
-                android:layout_height="100dp"/>
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bulbasaur" />
 
             <TextView
                 android:id="@+id/textViewnombre"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/text_view_nombre"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
