@@ -26,7 +26,7 @@
             android:label="@string/title_activity_menu_poke"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PokeMenu"
+        <activity android:name=".Poke"
             android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">

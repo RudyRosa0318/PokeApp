@@ -24,11 +24,11 @@ class MenuPoke : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val fab: FloatingActionButton = findViewById(R.id.fab)
+  /*      val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Boton por definirse", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
-        }
+        }*/
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -36,18 +36,12 @@ class MenuPoke : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send
+                R.id.nav_home, R.id.nav_trainer_pokemon
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-   /* R.id.nav_home.
-        activity?.supportFragmentManager?.beginTransaction()
-        ?.replace(R.id.nav_host_fragment, HomeFragment())
-        ?.commit()
-        startActivity(Intent(context, PokeMenu::class.java))
-*/
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -67,3 +61,5 @@ class MenuPoke : AppCompatActivity() {
 
 
 }
+
+

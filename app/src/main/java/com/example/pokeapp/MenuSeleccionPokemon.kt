@@ -62,14 +62,8 @@ class MenuSeleccionPokemon : Fragment() {
                         Log.d("LONGCLICK", "Longclick")
                     }
                 })
-
                 recyclerView.adapter = adapter
-
             }
-
-
-
         )
-
     }
 }

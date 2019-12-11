@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="8dp"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -11,18 +11,18 @@
         app:cardCornerRadius="4dp">
 
         <LinearLayout
-            android:layout_width="125dp"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:background="#A9532525"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/pokemon_image"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@android:color/white"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 app:srcCompat="@drawable/bulbasaur" />
 
             <TextView

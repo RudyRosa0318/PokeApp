@@ -14,7 +14,7 @@
     android:background="?attr/colorPrimary"
     app:titleTextColor="@android:color/white"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"></androidx.appcompat.widget.Toolbar>
+    android:layout_height="wrap_content"/>
 
     <fragment
         android:name="com.example.pokeapp.MenuSeleccionPokemon"

@@ -11,14 +11,14 @@ import com.example.pokeapp.Models.ApiResponse
 import com.example.pokeapp.ModelsDefintition.SpeciesResponse
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_poke_menu.*
+import kotlinx.android.synthetic.main.activity_pokemon_detail.*
 
-class PokeMenu : AppCompatActivity() {
+class Poke : AppCompatActivity() {
     var pokeid:Int=0
     var pokeimagen: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_poke_menu)
+        setContentView(R.layout.activity_pokemon_detail)
         val objetoIntent = intent
         pokeid = objetoIntent.getIntExtra("valorPK",0)
 
