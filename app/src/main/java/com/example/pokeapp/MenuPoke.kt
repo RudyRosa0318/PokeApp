@@ -1,6 +1,5 @@
 package com.example.pokeapp
 
-import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -14,9 +13,6 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
-import com.example.pokeapp.ui.home.HomeFragment
-import kotlinx.android.synthetic.main.activity_menu_poke.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class MenuPoke : AppCompatActivity() {
 
@@ -24,7 +20,7 @@ class MenuPoke : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu_poke)
+        setContentView(R.layout.activity_menu)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
