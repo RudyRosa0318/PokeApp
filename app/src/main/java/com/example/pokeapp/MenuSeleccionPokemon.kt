@@ -1,100 +1,75 @@
 package com.example.pokeapp
 
-import android.content.Context
-import android.net.Uri
+
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pokeapp.Common.Common
+import com.example.pokeapp.Common.ItemOffsetDecoration
+import com.example.pokeapp.Retrofit.IPokemonList
+import com.example.pokeapp.Retrofit.RetrofitClient
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import tech.twentytwobits.recyclerviewexample.ClickListener
+import tech.twentytwobits.recyclerviewexample.LongClickListener
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [MenuSeleccionPokemon.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [MenuSeleccionPokemon.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class MenuSeleccionPokemon : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    internal var compositeDisposable = CompositeDisposable()
+    internal var iPokemonList: IPokemonList
+    internal lateinit var recyclerView: RecyclerView
+    init {
+        val retrofit = RetrofitClient.instances
+        iPokemonList = retrofit.create(IPokemonList::class.java)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu_seleccion_pokemon, container, false)
-    }
+        savedInstanceState: Bundle?   ): View? {
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
+        val itemView = inflater.inflate(R.layout.fragment_menu_seleccion_pokemon, container, false)
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }
+        recyclerView = itemView.findViewById(R.id.pokemon_recycleview) as RecyclerView
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = GridLayoutManager(activity!!, 3)
+        val itemDecoration = ItemOffsetDecoration(activity!!,R.dimen.spacing)
+        recyclerView.addItemDecoration(itemDecoration)
+        fetchData()
 
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
+        return itemView
     }
+    private fun fetchData() {
+        compositeDisposable.add(iPokemonList.listadoPokemon
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe{ pokemones->
+                Common.pokemonList = pokemones.pokemon!!
+                //val adapter = AdapterCustom(this!!,Common.pokemonList,object:ClickListener)
+                val adapter = AdapterCustom(activity!!, Common.pokemonList!!, object: ClickListener {
+                    override fun onClick(view: View, index: Int) {
+                        Log.d("CLICK", "click")
+                    }
+                }, object: LongClickListener {
+                    override fun LongClickListener(view: View, index: Int) {
+                        Log.d("LONGCLICK", "Longclick")
+                    }
+                })
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
-    }
+                recyclerView.adapter = adapter
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MenuSeleccionPokemon.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MenuSeleccionPokemon().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
             }
+
+
+
+        )
+
     }
 }

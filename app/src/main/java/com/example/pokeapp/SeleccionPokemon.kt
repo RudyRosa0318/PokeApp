@@ -14,12 +14,13 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_seleccion.*
+import kotlinx.android.synthetic.main.fragment_menu_seleccion_pokemon.*
 import tech.twentytwobits.recyclerviewexample.ClickListener
 import tech.twentytwobits.recyclerviewexample.LongClickListener
 
 
 class SeleccionPokemon : AppCompatActivity() {
-    private lateinit var layoutManager: RecyclerView.LayoutManager
+  /*  private lateinit var layoutManager: RecyclerView.LayoutManager
     internal var compositeDisposable = CompositeDisposable()
     internal var iPokemonList:IPokemonList
     internal lateinit var recycler_view:RecyclerView
@@ -27,35 +28,14 @@ class SeleccionPokemon : AppCompatActivity() {
         val retrofit = RetrofitClient.instances
         iPokemonList = retrofit.create(IPokemonList::class.java)
     }
-
+*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        setContentView(R.layout.activity_seleccion)
 
-        layoutManager = GridLayoutManager(this, 3)
+       // layoutManager = GridLayoutManager(this, 3)
 
-        /*   val pokemons = ArrayList<Pokemon>()
-         pokemons.add(Pokemon("Bulbasaur", ""))
-
-
-         val adapter = AdapterCustom(this, pokemons, object : ClickListener {
-              override fun onClick(view: View, index: Int) {
-                  Toast.makeText(applicationContext, pokemons[index].name, Toast.LENGTH_SHORT).show()
-              }
-          }, object : LongClickListener {
-              override fun LongClickListener(view: View, index: Int) {
-                  Log.d("LONGCLICK", pokemons[index].name)
-              }
-          })
-
-         CODIGO PARA RECICLAR
-            button.setOnClickListener{
-            val menuScreen = Intent(this, PokeMenu :: class.java)
-            val valuePokemon = 4
-            menuScreen.putExtra("valorPK",valuePokemon)
-            startActivity(menuScreen)
-        }*/
-
+/*
         //recycler_view = itemView.findViewById(R.id.recycleViewPokemon)
         recycleViewPokemon.setHasFixedSize(true)
         recycleViewPokemon.layoutManager = layoutManager
@@ -73,10 +53,10 @@ class SeleccionPokemon : AppCompatActivity() {
             }
             swipeRefreshLayout.isRefreshing = false
 
-        }
+        }*/
     }
 
-    private fun fetchData() {
+  /*  private fun fetchData() {
         compositeDisposable.add(iPokemonList.listadoPokemon
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -92,15 +72,9 @@ class SeleccionPokemon : AppCompatActivity() {
                         Log.d("LONGCLICK", "Longclick")
                     }
                 })
-
-                recycleViewPokemon.adapter = adapter
-
+                pokemon_recycleview.adapter = adapter
             }
-
-
-
         );
-
-    }
+    }*/
 
 }

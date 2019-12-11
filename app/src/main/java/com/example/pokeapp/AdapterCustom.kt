@@ -8,14 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.pokeapp.Models.ApiResponse
+import com.example.pokeapp.Initial.Pokemon
 import tech.twentytwobits.recyclerviewexample.ClickListener
 import tech.twentytwobits.recyclerviewexample.LongClickListener
 
-class AdapterCustom(var context: Context, var pokemonList: List<ApiResponse>, var clickListener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdapterCustom.ViewHolder>() {
+class AdapterCustom(var context: Context, var pokemonList: List<Pokemon>, var clickListener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdapterCustom.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.template_pokemon, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.pokemon_list_item, parent, false)
         return ViewHolder(view, clickListener, longClickListener)
     }
 
@@ -25,7 +25,7 @@ class AdapterCustom(var context: Context, var pokemonList: List<ApiResponse>, va
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(context).load(pokemonList[position].sprites.front_default).into(holder.img_Poke)
+        Glide.with(context).load(pokemonList[position].img).into(holder.img_Poke)
         holder.txtPokemon.text = pokemonList[position].name
     }
 
@@ -46,7 +46,7 @@ class AdapterCustom(var context: Context, var pokemonList: List<ApiResponse>, va
         internal var txtPokemon: TextView
 
         init {
-            img_Poke = itemView.findViewById(R.id.imageViewPokemon) as ImageView
+            img_Poke = itemView.findViewById(R.id.pokemon_image) as ImageView
             txtPokemon = itemView.findViewById(R.id.textViewnombre) as TextView
             view.setOnClickListener(this)
             view.setOnLongClickListener(this)

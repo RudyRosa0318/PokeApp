@@ -54,29 +54,6 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(this, Observer {
             //textView.text = "Seleccione su Pokemon"
 
-           /*
-           Reciclar
-           buttonbulbasaur1.setOnClickListener {
-                activity?.supportFragmentManager?.beginTransaction()
-                    ?.replace(R.id.nav_host_fragment,HomeFragment())
-                    ?.commit()
-                startActivity(Intent(context, PokeMenu::class.java))
-
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonbulbasaur1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="56dp"
-        android:clickable="true"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="100dp"
-        app:srcCompat="@drawable/bulbasaur" />
-            } */
-
             /*recycler_view = itemView.findViewById(R.id.recycleViewPokemon) as RecyclerView
             recycler_view.setHasFixedSize(true)
             recycler_view.layoutManager = GridLayoutManager(activity!!, 3)
@@ -86,26 +63,18 @@ class HomeFragment : Fragment() {
 
 
         })
-
-
 /*
         swipeRefreshLayout.setOnRefreshListener {
             Log.d("REFRESH", "La información se ha refrescado")
-
             // Mentirita
             for (i in 1..100000000) {
-
             }
             swipeRefreshLayout.isRefreshing = false
-
         }*/
         return itemView
-
-
-
     }
 
-    private fun fetchData() {
+    /*private fun fetchData() {
         compositeDisposable.add(iPokemonList.listadoPokemon
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -121,16 +90,10 @@ class HomeFragment : Fragment() {
                         Log.d("LONGCLICK", "Longclick")
                     }
                 })
-
                 recycler_view.adapter = adapter
-
             }
-
-
-
         )
-
-    }
+    }*/
 
 
 }

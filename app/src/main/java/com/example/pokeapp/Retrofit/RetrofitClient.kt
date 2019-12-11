@@ -11,7 +11,7 @@ private  var  Instancia:Retrofit? = null
     {
         if (Instancia == null)
             Instancia = Retrofit.Builder()
-                .baseUrl("https://pokeapi.co/api/v2/pokemon/")
+                .baseUrl("https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
