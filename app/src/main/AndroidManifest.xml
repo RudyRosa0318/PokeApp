@@ -18,7 +18,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".Login.RegisterActivity"/>
+        <activity android:name=".Login.ForgotActivity"></activity>
+        <activity android:name=".Login.RegisterActivity" />
         <activity android:name=".Login.LoginActivity" />
         <activity
             android:name=".SeleccionPokemon"

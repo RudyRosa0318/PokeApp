@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Toast
+import com.example.pokeapp.Login.LoginActivity
 import com.example.pokeapp.Login.RegisterActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
         centerbtn.setOnClickListener{
-            val menuScreen = Intent(this, RegisterActivity :: class.java)
+            val menuScreen = Intent(this, LoginActivity :: class.java)
             startActivity(menuScreen)
         }
 

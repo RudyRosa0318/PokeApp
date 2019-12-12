@@ -25,9 +25,9 @@ class AdapterCustom(var context: Context, var pokemonList: List<Pokemon>, var cl
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(context).load(pokemonList[position].img).into(holder.img_Poke)
+        Glide.with(context).load(pokemonList[position].img).into(holder.imgPoke)
         holder.txtPokemon.text = pokemonList[position].name
-    }
+        }
 
     // Mapear las variables de cada item dentro de items con los
     // widgets correspondientes dentro de la vista
@@ -42,11 +42,11 @@ class AdapterCustom(var context: Context, var pokemonList: List<Pokemon>, var cl
             clickListener.onClick(view, adapterPosition)
         }
 
-        internal var img_Poke: ImageView
+        internal var imgPoke: ImageView
         internal var txtPokemon: TextView
 
         init {
-            img_Poke = itemView.findViewById(R.id.pokemon_image) as ImageView
+            imgPoke = itemView.findViewById(R.id.pokemon_image) as ImageView
             txtPokemon = itemView.findViewById(R.id.textViewnombre) as TextView
             view.setOnClickListener(this)
             view.setOnLongClickListener(this)

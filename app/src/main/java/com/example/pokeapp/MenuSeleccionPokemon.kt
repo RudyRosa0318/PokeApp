@@ -1,6 +1,8 @@
 package com.example.pokeapp
 
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,6 +13,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokeapp.Common.Common
 import com.example.pokeapp.Common.ItemOffsetDecoration
+import com.example.pokeapp.Initial.Pokemon
+import com.example.pokeapp.Login.LoginActivity
 import com.example.pokeapp.Retrofit.IPokemonList
 import com.example.pokeapp.Retrofit.RetrofitClient
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -35,7 +39,7 @@ class MenuSeleccionPokemon : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?   ): View? {
 
-        val itemView = inflater.inflate(R.layout.fragment_pokemon_atrapados, container, false)
+        val itemView = inflater.inflate(R.layout.fragment_home, container, false)
 
         recyclerView = itemView.findViewById(R.id.pokemon_recycleview) as RecyclerView
         recyclerView.setHasFixedSize(true)
@@ -56,10 +60,15 @@ class MenuSeleccionPokemon : Fragment() {
                 val adapter = AdapterCustom(activity!!, Common.pokemonList!!, object: ClickListener {
                     override fun onClick(view: View, index: Int) {
                         Log.d("CLICK", "click")
+                        val valuePokemon = Common.pokemonList!![index].id
+                        startActivity(Intent(activity, Poke::class.java).putExtra("valorPK",valuePokemon))
+
+
                     }
                 }, object: LongClickListener {
                     override fun LongClickListener(view: View, index: Int) {
                         Log.d("LONGCLICK", "Longclick")
+
                     }
                 })
                 recyclerView.adapter = adapter

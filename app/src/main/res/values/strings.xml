@@ -30,6 +30,10 @@
     <string name="textviewEmail">Correo</string>
     <string name="textviewContraseña">Contraseña</string>
     <string name="textview_User">Usuario</string>
+    <string name="textview_Crear">Crear Cuenta</string>
     <string name="textview_Olvido">¿Olvidaste tu Contrseña?</string>
     <string name="textview_Registrate">Registrarse</string>
+    <string name="textview_entrar">Entrar</string>
+    <string name="textview_forgotEmail">Email</string>
+    <string name="textview_forgotButton">Enviar Contraseña</string>
 </resources>

@@ -13,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import java.lang.ref.PhantomReference
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -33,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
         txtLastName = findViewById(R.id.txtLastName)
         txtEmail = findViewById(R.id.txtEmail)
         txtPassword = findViewById(R.id.txtContraseña)
-        progressBar = findViewById(R.id.progressBar)
+        progressBar = findViewById(R.id.progressBar1)
 
         database = FirebaseDatabase.getInstance()
         auth = FirebaseAuth.getInstance()
@@ -62,7 +61,7 @@ class RegisterActivity : AppCompatActivity() {
                         val user:FirebaseUser? = auth.currentUser
                         verifyEmail(user)
 
-                        val userBD = dbReference.child(user!!.uid)
+                        val userBD = dbReference.child(user?.uid!!)
                         userBD.child("Name").setValue(name)
                         userBD.child("LastName").setValue(lastName)
                         action()

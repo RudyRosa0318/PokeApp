@@ -8,7 +8,7 @@
     tools:context=".Login.RegisterActivity">
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar1"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         android:onClick="register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crear Cuenta"
+        android:text="@string/textview_Crear"
         android:background="@drawable/rounded"
         android:layout_margin="10dp"
         android:textColor="@android:color/white"/>
