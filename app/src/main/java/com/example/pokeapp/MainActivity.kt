@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Toast
+import com.example.pokeapp.Login.RegisterActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    //Contador para salir
+    //Contador para salir del activity
     var contador = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
 
         centerbtn.setOnClickListener{
-            val menuScreen = Intent(this, MenuPoke :: class.java)
+            val menuScreen = Intent(this, RegisterActivity :: class.java)
             startActivity(menuScreen)
         }
 

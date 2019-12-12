@@ -35,7 +35,7 @@ class MenuSeleccionPokemon : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?   ): View? {
 
-        val itemView = inflater.inflate(R.layout.fragment_menu_seleccion_pokemon, container, false)
+        val itemView = inflater.inflate(R.layout.fragment_pokemon_atrapados, container, false)
 
         recyclerView = itemView.findViewById(R.id.pokemon_recycleview) as RecyclerView
         recyclerView.setHasFixedSize(true)

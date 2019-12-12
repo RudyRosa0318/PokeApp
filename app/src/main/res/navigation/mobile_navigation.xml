@@ -14,7 +14,7 @@
         android:id="@+id/nav_trainer_pokemon"
         android:name="com.example.pokeapp.MenuSeleccionPokemon"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_menu_seleccion_pokemon"/>
+        tools:layout="@layout/fragment_pokemon_atrapados"/>
 
 
 </navigation>

@@ -15,7 +15,7 @@ import tech.twentytwobits.recyclerviewexample.LongClickListener
 class AdapterCustom(var context: Context, var pokemonList: List<Pokemon>, var clickListener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdapterCustom.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.pokemon_list_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.pokemon_list_template, parent, false)
         return ViewHolder(view, clickListener, longClickListener)
     }
 

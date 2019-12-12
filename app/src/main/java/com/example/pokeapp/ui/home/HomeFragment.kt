@@ -5,9 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -42,9 +40,6 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val itemView = inflater.inflate(R.layout.fragment_home, container, false)
-       /* val textView: TextView = itemView.findViewById(R.id.text_selecciona)
-        homeViewModel.text.observe(this, Observer {
-        })*/
 
 
         recyclerView = itemView.findViewById(R.id.pokemon_recycleview) as RecyclerView
@@ -62,8 +57,7 @@ class HomeFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ pokemones->
                 Common.pokemonList = pokemones.pokemon!!
-                //val adapter = AdapterCustom(this!!,Common.pokemonList,object:ClickListener)
-                val adapter = AdapterCustom(activity!!, Common.pokemonList!!, object: ClickListener {
+                  val adapter = AdapterCustom(activity!!, Common.pokemonList!!, object: ClickListener {
                     override fun onClick(view: View, index: Int) {
                         Log.d("CLICK", "click")
                     }

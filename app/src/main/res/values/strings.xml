@@ -25,5 +25,11 @@
     <string name="text_view_primer_movimiento">Primer Movimiento </string>
     <string name="text_view_nombre"> Bulbasaur </string>
     <string name="textview">Seleccione Su Pokemon</string>
-
+    <string name="textviewNombre">Nombre</string>
+    <string name="textviewApellido">Apellido</string>
+    <string name="textviewEmail">Correo</string>
+    <string name="textviewContraseña">Contraseña</string>
+    <string name="textview_User">Usuario</string>
+    <string name="textview_Olvido">¿Olvidaste tu Contrseña?</string>
+    <string name="textview_Registrate">Registrarse</string>
 </resources>
